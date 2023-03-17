@@ -13,4 +13,14 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'mattn/emmet-vim'
+
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
+
+  vim.cmd('colorscheme rose-pine')
+
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+
+  use('theprimeagen/harpoon')
+
   end)
+
